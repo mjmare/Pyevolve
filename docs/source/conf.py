@@ -53,8 +53,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Pyevolve'
-copyright = u'2010, Christian S. Perone'
+project = 'Pyevolve'
+copyright = '2010, Christian S. Perone'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -185,8 +185,8 @@ htmlhelp_basename = 'Pyevolvedoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'Pyevolve.tex', ur'Pyevolve Documentation',
-   ur'Christian S. Perone', 'manual'),
+  ('index', 'Pyevolve.tex', r'Pyevolve Documentation',
+   r'Christian S. Perone', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

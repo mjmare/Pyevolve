@@ -29,7 +29,7 @@ def highlightlang_directive(name, arguments, options, content, lineno,
         except Exception:
             linenothreshold = 10
     else:
-        linenothreshold = sys.maxint
+        linenothreshold = sys.maxsize
     return [addnodes.highlightlang(lang=arguments[0].strip(),
                                    linenothreshold=linenothreshold)]
 
@@ -44,7 +44,7 @@ directives.register_directive('highlightlang', highlightlang_directive) # old na
 
 def codeblock_directive(name, arguments, options, content, lineno,
                         content_offset, block_text, state, state_machine):
-    code = u'\n'.join(content)
+    code = '\n'.join(content)
     literal = nodes.literal_block(code, code)
     literal['language'] = arguments[0]
     literal['linenos'] = 'linenos' in options
@@ -105,7 +105,7 @@ def literalinclude_directive(name, arguments, options, content, lineno,
     if linespec is not None:
         try:
             linelist = parselinenos(linespec, len(lines))
-        except ValueError, err:
+        except ValueError as err:
             return [state.document.reporter.warning(str(err), line=lineno)]
         lines = [lines[i] for i in linelist]
 

@@ -26,7 +26,7 @@ class GSimpleGATestCase(TestCase):
         self.ga = GSimpleGA.GSimpleGA(self.genome)
         self.ga.evolve(freq_stats=1)
         result2 = self.ga.bestIndividual()
-        self.assertNotEquals(result1, result2)
+        self.assertNotEqual(result1, result2)
 
     def test_fails_with_negative_evaluator(self):
         self.genome.evaluator.set(lambda _: -1)
